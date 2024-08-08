@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FirstWebMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FirstWebMvc.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light bg-black border-bottom box-shadow mb-1" style="height: 80px;">
+            <div class="container-fluid justify-content-between">
+
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse navbar-collapse1 d-lg-inline-flex justify-content-between text-center" style="width:33%;">
+                    <ul class="navbar-nav px-4">
+                        <li class="nav-item">
+                            <a class="nav-active navlink text-danger fw-bold" asp-area="" asp-controller="Home" asp-action="Index" style="color:red;">HOME</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navlink dropdown-toggle fw-bold" asp-area="" data-bs-toggle="dropdown" asp-controller="Home" asp-action="Index">SHOP</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Women's Clothing</a>
+                                <a href="#" class="dropdown-item">Men's Clothing</a>
+                                <a href="#" class="dropdown-item">Kids Clothing</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navlink dropdown-toggle fw-bold" asp-area="" data-bs-toggle="dropdown" asp-controller="Home" asp-action="Index">PAGES</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">About</a>
+                                <a href="#" class="dropdown-item">Contect Us</a>
+                                <a href="#" class="dropdown-item">Terms</a>
+                                <a href="#" class="dropdown-item">Shipping</a>
+                                <a href="#" class="dropdown-item">Privacy Policy</a>
+                                <a href="#" class="dropdown-item">Refund Policy</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">SALE</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="navlink dropdown-toggle fw-bold" asp-area="" data-bs-toggle="dropdown" asp-controller="Home" asp-action="Index">COLLECTIONS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Cloth</a>
+                                <a href="#" class="dropdown-item">Shose</a>
+                                <a href="#" class="dropdown-item">Gifts</a>
+                                <a href="#" class="dropdown-item">Decorations</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-brand text-logo logo" style="width:33%;">
+                    <h3>Faishion Up</h3>
+                </div>
+                <div class="icons align-items-center text-center" style="width:33%;">
+                    <ul class="d-flex gap-3 h4 justify-content-end mr-4">
+
+                        <li class="list-unstyled homeIcon" title=" Login" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><i class="fa-regular fa-user fw-bold"></i></li>
+                        <li class="list-unstyled homeIcon dropdown" title=" Search" data-toggle="modal" href=".bd-example-modal-sm" role="button">
+                            <i class="fas fa-search fw-bold" data-bs-toggle="dropdown"></i>
+                            <div class="dropdown-menu main-search">
+                                <form>
+                                <input type="text" class="form-control" />
+                                <button type="submit" class="search1"><i class="fas fa-search text-black fw-bold "></i></button>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="list-unstyled homeIcon likeIcon" title=" Liked"><i class="far fa-heart fw-bold "></i></li>
+                        <li class="list-unstyled homeIcon" title=" Cart"><i class="fas fa-cart-plus fw-bold "><span id="storeCart">0</span></i></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div class="footer0">
+            <h1>Faishion Up</h1>
+        </div>
+        <div class="footer1">
+            Connect with us at
+            <div class="social-media">
+                <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a>
+                <a href="#"> <ion-icon name="logo-linkedin"></ion-icon> </a>
+                <a href="#"> <ion-icon name="logo-youtube"></ion-icon> </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="product">
+                <div class="heading">Products</div>
+                <div class="div">Sell your Products</div>
+                <div class="div">Advertise</div>
+                <div class="div">Pricing</div>
+                <div class="div">Product Buisness</div>
+            </div>
+            <div class="services">
+                <div class="heading">Services</div>
+                <div class="div">Return</div>
+                <div class="div">Cash Back</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Others</div>
+            </div>
+            <div class="Company">
+                <div class="heading">Company</div>
+                <div class="div">Complaint</div>
+                <div class="div">Careers</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Support</div>
+            </div>
+            <div class="Get Help">
+                <div class="heading">Get Help</div>
+                <div class="div">Help Center</div>
+                <div class="div">Privacy Policy</div>
+                <div class="div">Terms</div>
+                <div class="div">Login</div>
+            </div>
+        </div>
+        <div class="footer3">
+           &copy; 2024 - FirstWebMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+   @* <footer class="border-top footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><strong>SUBSCRIBE TO OUR NEWSLETTER</strong></h5>
+                    <p style="line-height: 40px;">Join our mailing list for the latest product updates!</p>
+                </div>
+                <div class="col-md-6 subcol px-5">
+                    <input type="email" class="form-control subinp mx-4" placeholder="Email Address" />
+                    <input type="submit" class="explore btn px-4" value="SUSCRIBE" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0591/9681/files/logo1_170x40_crop_center.png?v=1646820500" alt="Mysterio" />
+                            <div>
+                                <p class="py-3" style="white-space: break-spaces;">Our company is dedicated to creating unique and comfortable clothing for men and women.</p>
+                                <a>Coll Us:748-947-9383</a><br />
+                                <a>Send us an email</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5><strong>COMPANY</strong></h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><strong>INFORMATION</strong></h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><strong>ACCOUNT</strong></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            &copy; 2023 - FirstWebMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./ecommerce.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html>
+
+@*if(response=="True") {
+    $('form')[0].reset();
+    alert("Your information has been stored.");
+}
+else
+    alert(" Some Error has occured Errror !!! ID duplicate");*@

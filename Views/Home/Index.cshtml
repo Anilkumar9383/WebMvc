@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@Html.Partial("Login")
+@*@Html.Partial("SignUp")*@
+<div class="container-fluid1">
+    <div class="mainContent">
+        <div class="content">
+            <p class="text1 text-light">50% OFF EVERYTHING</p>
+            <h1 class="text2">Fashion collection 2023</h1>
+            <p class="text3 text-light">We offer free shipping on all orders over <strong>₹350.00</strong></p>
+            <a class="explore btn" asp-controller="Home" asp-action="ExploreNow">EXPLORE NOW</a>
+        </div>
+    </div>
+    <div class="shopNow row">
+        <div class="col-12 col-lg-6 shopBag">
+            <div class="shopBag-text">
+                <p>NEW BAGS</p>
+                <h2>Up to 30% off on all items.</h2>
+                <a class="explore btn mt-4" asp-controller="Home" asp-action="ExploreNow">Shop Now</a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 shopTsirt">
+            <div class="shopTsirt-text">
+                <p>SELECT T-SHIRTS</p>
+                <h2> New in this week</h2>
+                <p>Sale up to 50% off!</p>
+                <a class="explore btn mt-4"asp-controller="Home" asp-action="ExploreNow">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
